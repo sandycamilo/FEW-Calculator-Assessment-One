@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>calculator</title>
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+                color:#fff;
+                font: Helvetica; 
+                padding-top: 100px;
+            }
+
+            .calculator {
+                display: grid;
+                grid-gap: 0;
+                background-color:#666;
+                padding: 2px;
+                width: 300px;
+                height: 500px;
+                grid-template-columns: repeat(4, 1fr); 
+                grid-template-rows: repeat(6, 1fr);
+                grid-template-areas: 'a a a a'
+                                     'd d2 d3 o'
+                                     'n n2 n3 o2'
+                                     'n4 n5 n6 o3'
+                                     'n7 n8 n9 o4'
+                                     'n10 n10 n11 o5';                   
+            }
+
+            #button{
+                margin: 1px;
+                border: none;
+                margin: 1px;
+                border-radius: 8px;
+                font-size: 2em;
+                font-weight: 100; 
+            }
+
+           .display{
+                font-size: 4em;
+                font-weight: 100;
+                text-align: right;
+                line-height: 100px;
+                padding-top: 0.25em;
+                padding-bottom: 0.25em;
+                padding: 0.25em;
+                background-color: #444;
+           }
+           
+           .operations {
+               background-color: #888;
+               border-radius: 8px;
+               color: #fff;
+               font-size: 22px;
+           }
+
+           .operation {
+                background-color: #f90;
+                border-radius: 8px;
+                color: #fff;
+                font-size: 22px;
+           }
+
+           .number {
+               color: #fff;
+               background-color: darkgray;
+               border-radius: 8px;
+               font-size: 22px;
+           }          
+        </style>
+    </head>
+    <body>
+        <div class="calculator">
+            <div class="display" style= " grid-area: a; text-align: right"> 0</div>
+
+            <button style= "grid-area: d;" class= "operations">C</button>
+            <button style= "grid-area: d2;" class= "operations">+/-</button>
+            <button style= "grid-area: d3;" class= "operations">%</button>
+
+            <button style= "grid-area: o;" class= "operation">/</button>
+            <button style= "grid-area: o2;" class= "operation">X</button>
+            <button style= "grid-area: o3;" class= "operation">-</button>
+            <button style= "grid-area: o4;" class= "operation">+</button>
+            <button style= "grid-area: o5;" class= "operation">=</button>
+
+            <button style= "grid-area: n;" class="number">9</button>
+            <button style= "grid-area: n2;" class="number">8</button>
+            <button style= "grid-area: n3;" class="number">7</button>
+            <button style= "grid-area: n4;" class="number">6</button>
+            <button style= "grid-area: n5;" class="number">5</button>
+            <button style= "grid-area: n6;" class="number">4</button>
+            <button style= "grid-area: n7;" class="number">3</button>
+            <button style= "grid-area: n8;" class="number">2</button>
+            <button style= "grid-area: n9;" class="number">1</button>
+            <button style= "grid-area: n10;" class="number">0</button>
+            <button style= "grid-area: n11;" class="number">.</button>
+        </div>
+    </body>   
+</html>
